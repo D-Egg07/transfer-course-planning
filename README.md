@@ -24,7 +24,7 @@ Copy `skills/transfer-course-planning/` into `~/.claude/skills/`.
 3. **Reconcile** — mark completed courses against major prep and GE areas; apply AP/IB credit per the college's own chart; flag after-transfer courses and remaining requirements
 4. **Admission scaffolding** — minimum transferable units, junior standing, GPA floors and competitive ranges, UC 7-course pattern or CSU Golden Four requirements, impacted-major status, and CSU Constitution & American Ideals requirement
 5. **Guaranteed backup** — recommend and fully map a TAG-eligible UC (Davis, Irvine, Merced, Riverside, Santa Barbara, Santa Cruz) or CSU ADT if the primary target has no guarantee
-6. **Cross-enrollment** — if available through the community college, reserve one or two lower-division courses per term to take at the target after admission but before transfer
+6. **Cross-enrollment** — if the community college participates with the target, take one or two lower-division courses (up to two terms) at the target campus *before* applying — you lose eligibility once admitted to any four-year school
 7. **Build the term grid** — distribute courses across terms to the transfer date, respecting prerequisites and unit caps, with running totals including AP and cross-enrollment credits
 8. **Render the planner** — one HTML artifact per primary target, with a caveats block, catalog year attribution, and admit-term guidance
 
