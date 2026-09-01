@@ -1,20 +1,34 @@
 <!--
-  transfer-course-planning planner template. Fill every {{TOKEN}} below, then
-  publish the result as a self-contained HTML artifact (the publishing system
-  wraps it in <!doctype>/<html>/<head>/<body>).
+  transfer-course-planning planner template.
+
+  Fill every {{TOKEN}} below, then publish the result as a self-contained HTML
+  artifact (the publishing system wraps it in <!doctype>/<html>/<head>/<body>).
+
+  CONTRACT: the template provides every structural wrapper — <header>, every
+  <section> and its <h2> heading, <footer>, and the <dl class="meta">,
+  <div class="terms">, <div class="caveats"> + <ul>, and <div class="src">
+  shells. Each token's commented example shows ONLY the inner markup that
+  replaces the token. Never re-wrap a container the template already provides.
+  The single exception is {{CROSS_ENROLLMENT_SECTION}}, which is an entire
+  <section> (or an empty string) and is placed as a direct child of the page
+  container, not inside a template <section>.
+
+  CONVENTIONS: in a course "Satisfies" cell, prefix an interchangeable course
+  with "e.g." in its <span class="title-sub"> to signal the student may swap in
+  any equivalent course for that requirement / GE area.
 
   {{TITLE}}                    Browser/tab title, e.g. "LPC to Berkeley Cognitive Science Planner".
   {{DESCRIPTION}}              One-sentence meta description of the plan (school pair + major + backup).
-  {{LEDE}}                     Header eyebrow + <h1> + lede paragraph: who this is for and the transfer goal.
-  {{META_ITEMS}}               Meta strip: <div><dt>label</dt><dd>value</dd></div> per key date / threshold.
-  {{STANDING_ITEMS}}           "Where you already stand" callout body: <h3> + <ul><li> of already-satisfied requirements, then the tag legend.
+  {{LEDE}}                     Header block: <p class="eyebrow"> + <h1> + <p class="lede"> — who this is for, the transfer goal, unit-load expectations, and any state-specific framing (e.g. Cal-GETC).
+  {{META_ITEMS}}               Meta strip items: one <div><dt>label</dt><dd>value</dd></div> per key date / threshold.
+  {{STANDING_ITEMS}}           "Where you already stand" section body: a <div class="callout done"> of already-satisfied requirements, then a <div class="legend"> tag key.
   {{CROSS_ENROLLMENT_SECTION}} The ENTIRE optional cross-enrollment <section>...</section>, or "" (empty string) when not applicable.
-  {{TERM_CARDS}}               One <article class="term"> per term: term number, heading, unit total, optional note, and a Course/Title/Satisfies/Units table.
+  {{TERM_CARDS}}               One <article class="term"> per term: term number, heading, unit total, optional note, and a Course/Title/Satisfies/Units table wrapped in <div class="table-wrap">.
   {{TRACKERS}}                 One or more <div class="panel"> requirement checklists (major prep, GE, backup screening).
-  {{BACKUP_CALLOUT}}           Guaranteed-backup <section> body: <h2> + intro + <div class="callout tag"> with the backup-school steps.
-  {{CAVEATS}}                  "Verify with a counselor" block: <div class="caveats"> with <h3> + <ul><li> of open items.
-  {{SOURCES}}                  Footer: a "Built ... for planning only" line plus a <div class="src"> list of source links.
-  {{CATALOG_YEAR}}             Articulation/agreement catalog year, e.g. "2025-26" — appears in the caveats/footer text.
+  {{BACKUP_CALLOUT}}           Guaranteed-backup section body: an intro <p class="intro"> + a <div class="callout callout--backup"> of steps. No <section>/<h2> — the template provides them.
+  {{CAVEATS}}                  "Verify with a counselor" open-items list: <li> elements only — the template provides the <div class="caveats">, <h3>, and <ul>.
+  {{SOURCES}}                  Footer source links: <a> elements separated by " &middot; " — the template provides <footer>, the catalog-year line, and the "Sources:" wrapper.
+  {{CATALOG_YEAR}}             Articulation/agreement catalog year, e.g. "2025-26"; rendered live in the footer line "based on the {{CATALOG_YEAR}} assist.org agreement".
 -->
 <title>{{TITLE}}</title>
 <meta name="description" content="{{DESCRIPTION}}" />
@@ -30,8 +44,8 @@
     --ink: #1d2732;
     --muted: #5c6672;
     --rule: #d9d2c2;
-    --berkeley: #0b4a7a;
-    --berkeley-soft: #e4eef5;
+    --accent: #0b4a7a;
+    --accent-soft: #e4eef5;
     --gold: #b0741a;
     --gold-soft: #f6ead2;
     --done: #2f7350;
@@ -44,7 +58,7 @@
     :root:not([data-theme="light"]) {
       --ground: #10151b; --surface: #171e26; --surface-2: #1f2831;
       --ink: #e9e4d8; --muted: #9aa4b0; --rule: #2f3a45;
-      --berkeley: #6fb0dd; --berkeley-soft: #16303f;
+      --accent: #6fb0dd; --accent-soft: #16303f;
       --gold: #dca24a; --gold-soft: #3a2e18;
       --done: #6dc199; --done-soft: #163224;
       --xe: #b79ce0; --xe-soft: #2b2340;
@@ -54,7 +68,7 @@
   :root[data-theme="dark"] {
     --ground: #10151b; --surface: #171e26; --surface-2: #1f2831;
     --ink: #e9e4d8; --muted: #9aa4b0; --rule: #2f3a45;
-    --berkeley: #6fb0dd; --berkeley-soft: #16303f;
+    --accent: #6fb0dd; --accent-soft: #16303f;
     --gold: #dca24a; --gold-soft: #3a2e18;
     --done: #6dc199; --done-soft: #163224;
     --xe: #b79ce0; --xe-soft: #2b2340;
@@ -74,7 +88,7 @@
   .eyebrow {
     font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
     font-size: 11.5px; font-weight: 600; letter-spacing: .13em;
-    text-transform: uppercase; color: var(--berkeley); margin: 0 0 14px;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 14px;
   }
   header h1 { font-size: clamp(28px,5vw,42px); letter-spacing: -.01em; }
   header p.lede { margin: 14px 0 0; max-width: 60ch; color: var(--muted); font-size: 16px; }
@@ -94,7 +108,7 @@
     font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 600;
     letter-spacing: .03em; padding: 3px 7px; border-radius: 5px; white-space: nowrap;
   }
-  .tag.mp { background: var(--berkeley-soft); color: var(--berkeley); }
+  .tag.mp { background: var(--accent-soft); color: var(--accent); }
   .tag.ge { background: var(--gold-soft); color: var(--gold); }
   .tag.ap { background: var(--done-soft); color: var(--done); }
   .tag.xe { background: var(--xe-soft); color: var(--xe); }
@@ -103,13 +117,13 @@
   .legend span { display: inline-flex; align-items: center; gap: 7px; }
 
   .terms { display: flex; flex-direction: column; gap: 20px; margin-top: 24px; }
-  .term { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--berkeley); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; break-inside: avoid; }
+  .term { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; break-inside: avoid; }
   .term.summer { border-left-style: dashed; }
   .term.final { border-left-color: var(--gold); }
   .term-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; padding: 15px 20px; background: var(--surface-2); border-bottom: 1px solid var(--rule); }
   .term-head h3 { font-size: 17px; }
   .term-head .term-n { font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 600; color: var(--muted); letter-spacing: .1em; }
-  .term-head .units { margin-left: auto; font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--berkeley); }
+  .term-head .units { margin-left: auto; font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--accent); }
   .term-head .note { flex-basis: 100%; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
 
   .table-wrap { overflow-x: auto; }
@@ -126,11 +140,11 @@
   .callout { margin-top: 22px; border-radius: 12px; padding: 18px 20px; }
   .callout.done { background: var(--done-soft); border: 1px solid color-mix(in srgb, var(--done) 34%, transparent); }
   .callout.xe { background: var(--xe-soft); border: 1px solid color-mix(in srgb, var(--xe) 36%, transparent); }
-  .callout.tag { background: var(--berkeley-soft); border: 1px solid color-mix(in srgb, var(--berkeley) 32%, transparent); }
+  .callout--backup { background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 32%, transparent); }
   .callout h3 { font-size: 15px; margin-bottom: 8px; }
   .callout.done h3 { color: var(--done); }
   .callout.xe h3 { color: var(--xe); }
-  .callout.tag h3 { color: var(--berkeley); }
+  .callout--backup h3 { color: var(--accent); }
   .callout ul { margin: 0; padding-left: 18px; }
   .callout li { margin: 5px 0; }
 
@@ -150,9 +164,9 @@
   .caveats li { margin: 6px 0; }
 
   footer { margin-top: 46px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--muted); }
-  footer a { color: var(--berkeley); }
+  footer a { color: var(--accent); }
   footer .src { margin-top: 6px; word-break: break-word; }
-  a { color: var(--berkeley); }
+  a { color: var(--accent); }
 
   @media (max-width: 560px) { td, th { padding: 10px 14px; } .term-head { padding: 14px; } }
   @media print {
@@ -167,15 +181,15 @@
 <div class="wrap">
 
   <header>
-    <!-- {{LEDE}} example:
+    <!-- {{LEDE}} — replaces the eyebrow + h1 + lede. Example:
     <p class="eyebrow">Las Positas College &rarr; UC Berkeley &nbsp;/&nbsp; Fall 2026 &ndash; Spring 2028</p>
     <h1>Berkeley Cognitive Science plan</h1>
-    <p class="lede">A term-by-term Las Positas course map to transfer as a junior into UC Berkeley's Cognitive Science B.A. UC Santa Cruz is kept open as a guaranteed backup through TAG.</p>
+    <p class="lede">A term-by-term Las Positas course map, ~15&ndash;16 units per term, to transfer as a junior into UC Berkeley's Cognitive Science B.A. and satisfy Cal-GETC. UC Santa Cruz is kept open as a guaranteed backup through TAG.</p>
     -->
     {{LEDE}}
 
     <dl class="meta">
-      <!-- {{META_ITEMS}} example:
+      <!-- {{META_ITEMS}} — one <div> per item. Example:
       <div><dt>UC application</dt><dd>Aug 1 &ndash; Nov 30, 2027</dd></div>
       <div><dt>Transfer term</dt><dd>Fall 2028</dd></div>
       <div><dt>Min. units</dt><dd>60 UC-transferable</dd></div>
@@ -187,7 +201,7 @@
 
   <section>
     <h2>Where you already stand</h2>
-    <!-- {{STANDING_ITEMS}} example:
+    <!-- {{STANDING_ITEMS}} — a done callout plus the tag legend. Example:
     <div class="callout done">
       <h3>Already handled by Fall 2026 + AP + high school</h3>
       <ul>
@@ -205,7 +219,9 @@
     {{STANDING_ITEMS}}
   </section>
 
-  <!-- {{CROSS_ENROLLMENT_SECTION}} — the ENTIRE <section> or an empty string. Example:
+  <!-- {{CROSS_ENROLLMENT_SECTION}} — an ENTIRE <section> or an empty string.
+       Placed here as a direct child of .wrap (NOT inside a template section).
+       Example:
   <section>
     <h2>UC Berkeley cross-enrollment <span class="count">the priority move</span></h2>
     <p class="intro">Las Positas participates in UC Berkeley cross-enrollment: after one completed semester you may take one lower-division Berkeley course per term, up to two terms, space-available, paying LPC fees.</p>
@@ -222,13 +238,12 @@
   {{CROSS_ENROLLMENT_SECTION}}
 
   <section>
-    <h2>The schedule <span class="count">~15&ndash;16 units per term</span></h2>
-    <p class="intro">Courses marked &ldquo;e.g.&rdquo; swap freely with any other course for that Cal-GETC area.</p>
-
+    <h2>The schedule</h2>
     <div class="terms">
-      <!-- {{TERM_CARDS}} — one <article class="term"> per term. Add class "summer" for a
-           short intersession card and "final" for the last term before transfer.
-           Wrap the table in <div class="table-wrap"> so it scrolls on narrow screens. Example:
+      <!-- {{TERM_CARDS}} — one <article class="term"> per term. Add class "summer"
+           for a short intersession card and "final" for the last term before
+           transfer. In a "Satisfies" cell, prefix an interchangeable course with
+           "e.g." in its <span class="title-sub">. Example:
       <article class="term">
         <div class="term-head"><span class="term-n">TERM 1</span><h3>Fall 2026 &mdash; in progress</h3><span class="units">16 units</span>
           <span class="note">Optional term note goes here.</span></div>
@@ -237,6 +252,7 @@
             <thead><tr><th>Course</th><th>Title</th><th>Satisfies</th><th class="u">Units</th></tr></thead>
             <tbody>
               <tr><td class="code">PSYC 4</td><td>Brain, Mind and Behavior</td><td><div class="tags"><span class="tag mp">MAJOR &middot; Neuroscience</span></div></td><td class="u">3</td></tr>
+              <tr><td class="code">ARHS 1</td><td>Intro to Art History <span class="title-sub">e.g. any Area 3A course</span></td><td><div class="tags"><span class="tag ge">GE 3A</span></div></td><td class="u">3</td></tr>
               <tr class="opt"><td class="code">COG SCI 1</td><td>Intro to Cognitive Science <span class="title-sub">at UC Berkeley</span></td><td><div class="tags"><span class="tag mp">MAJOR</span><span class="tag xe">X-ENROLL</span></div></td><td class="u">4</td></tr>
             </tbody>
           </table>
@@ -261,49 +277,49 @@
     {{TRACKERS}}
   </section>
 
-  <!-- {{BACKUP_CALLOUT}} — the guaranteed-backup <section> body. Example:
   <section>
-    <h2>UC Santa Cruz &mdash; the backup <span class="count">via TAG</span></h2>
+    <h2>Your guaranteed backup</h2>
+    <!-- {{BACKUP_CALLOUT}} — an intro paragraph plus a backup callout. No
+         <section>/<h2> — the template provides them. Example:
     <p class="intro">This plan already covers everything UCSC's Cognitive Science B.S. screens for &mdash; you just have to file the TAG and keep your grades up.</p>
-    <div class="callout tag">
+    <div class="callout callout--backup">
       <h3>What to do</h3>
       <ul>
         <li><strong>File the TAG application Sept 1&ndash;30, 2027</strong> &mdash; separate from and one month before the UC application.</li>
         <li><strong>At filing:</strong> 30+ UC-transferable units and a 3.0 overall UC-transferable GPA.</li>
       </ul>
     </div>
-  </section>
-  -->
-  <section>
+    -->
     {{BACKUP_CALLOUT}}
   </section>
 
   <section>
     <h2>Before you register &mdash; verify with a counselor</h2>
-    <!-- {{CAVEATS}} example:
     <div class="caveats">
       <h3>Open items</h3>
       <ul>
-        <li><strong>2026&ndash;27 ASSIST:</strong> the agreement for 2026&ndash;27 was not published yet; this uses the {{CATALOG_YEAR}} agreement. Confirm the programming articulation path.</li>
+        <!-- {{CAVEATS}} — <li> items only. Example:
+        <li><strong>Newer agreement:</strong> a later articulation agreement may have been published since this plan was built &mdash; confirm every major-prep articulation.</li>
         <li><strong>Cross-enrollment:</strong> confirm current rules, cost, and registration steps with the Transfer Center.</li>
-        <li><strong>Cal-GETC certification:</strong> request it from Admissions &amp; Records at the end of your last term before transfer.</li>
+        <li><strong>Certification:</strong> request GE certification from Admissions &amp; Records at the end of your last term before transfer.</li>
+        -->
+        {{CAVEATS}}
       </ul>
     </div>
-    -->
-    {{CAVEATS}}
   </section>
 
   <footer>
-    <!-- {{SOURCES}} example:
-    <div>Built for planning only, based on the {{CATALOG_YEAR}} agreement. ASSIST does not replace a counselor &mdash; review this with the Transfer Center.</div>
+    <div>Built for planning only. An articulation database does not replace a counselor &mdash; review this with your college's Transfer Center.</div>
+    <div>Course requirements are based on the {{CATALOG_YEAR}} assist.org agreement &mdash; verify against the current agreement before relying on this plan.</div>
     <div class="src">
       Sources:
+      <!-- {{SOURCES}} — <a> links separated by " &middot; ". Example:
       <a href="https://assist.org/">ASSIST &mdash; Berkeley Cognitive Science B.A.</a> &middot;
       <a href="https://laspositascollege.edu/">LPC Cal-GETC 2026&ndash;27</a> &middot;
       <a href="https://admissions.ucsc.edu/transfer-admission-guarantee-tag">UCSC TAG</a>
+      -->
+      {{SOURCES}}
     </div>
-    -->
-    {{SOURCES}}
   </footer>
 
 </div>
