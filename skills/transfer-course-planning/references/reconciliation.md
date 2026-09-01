@@ -1,6 +1,8 @@
-# General-education patterns
+# Reconciliation reference
 
-Cal-GETC (California General Education – Certification for Transfer, effective Fall 2025) unifies lower-division general education for all new transfer students into UC and CSU. It requires 11 courses across six areas:
+## General-education patterns
+
+Cal-GETC (California General Education Transfer Curriculum, effective Fall 2025) unifies lower-division general education for all new transfer students into UC and CSU. It requires 11 courses across six areas:
 
 | Area | Requirement |
 |------|-------------|
@@ -11,14 +13,14 @@ Cal-GETC (California General Education – Certification for Transfer, effective
 | 3A | Arts |
 | 3B | Humanities |
 | 4 | Social & Behavioral Sciences (two courses from two different disciplines) |
-| 5A | Physical Science (with lab) |
-| 5B | Biological Science (with lab) |
-| 5C | Laboratory (additional lab course) |
+| 5A | Physical Science |
+| 5B | Biological Science |
+| 5C | Laboratory (required only if neither 5A nor 5B includes a lab component) |
 | 6 | Ethnic Studies |
 
 IGETC and CSU GE-Breadth are the pre-Fall-2025 patterns, relevant only for continuing students who began before Fall 2025.
 
-# UC admission scaffolding
+## UC admission scaffolding
 
 UC transfer admission typically requires 60 UC-transferable semester units completed by the end of the spring term before transfer, plus junior standing (60+ units with satisfactory academic progress). Roughly 70 lower-division units maximum apply toward the UC degree.
 
@@ -27,7 +29,7 @@ The **7-course pattern** is a common scaffolding for ensuring broad preparation:
 - One math or quantitative reasoning course
 - Four breadth courses from at least two of: {arts & humanities}, {social & behavioral sciences}, {physical & biological sciences}
 
-# CSU admission scaffolding
+## CSU admission scaffolding
 
 CSU transfer requires 60 transferable semester units and completion of the **Golden Four** courses with C- or better by the deadline term (typically the prior spring; prior fall for many impacted programs):
 
@@ -38,11 +40,11 @@ CSU transfer requires 60 transferable semester units and completion of the **Gol
 
 Minimum overall GPA is 2.0; however, 2.5+ is expected and higher GPA may be required for impacted campuses and majors. Always check the specific campus for current thresholds.
 
-# US History, Constitution & American Ideals (CSU only)
+## US History, Constitution & American Ideals (CSU only)
 
 This requirement is mandated for the CSU bachelor's degree and is NOT part of Cal-GETC. It typically consists of two courses and may be completed either before or after transfer.
 
-# AP / IB credit
+## AP / IB credit
 
 **The GE area an AP or IB score satisfies is defined by the community college's own published AP/IB chart — read that chart, never assume.**
 
@@ -50,7 +52,7 @@ Common cases: AP Psychology and AP Human Geography each commonly map to Area 4, 
 
 AP/IB applied to major preparation requirements varies by campus and by exam. Apply AP/IB toward major credit only when the assist.org agreement or the campus explicitly states it—always flag "confirm with the campus."
 
-# Language other than English (UC graduation requirement, not admission)
+## Language other than English (UC graduation requirement, not admission)
 
 UC requires demonstration of proficiency in a language other than English, satisfied by any one of:
 
@@ -61,7 +63,7 @@ UC requires demonstration of proficiency in a language other than English, satis
 
 Native speakers can often validate the requirement by exam or petition.
 
-# UC Transfer Admission Guarantee (TAG)
+## UC Transfer Admission Guarantee (TAG)
 
 TAG is offered only by **UC Davis, UC Irvine, UC Merced, UC Riverside, UC Santa Barbara, and UC Santa Cruz**. It is NOT offered by UC Berkeley, UCLA, or UC San Diego.
 
@@ -69,7 +71,7 @@ TAG is filed **September 1–30** of the year before transfer, with no late subm
 
 Numbers vary by campus and year — direct the student to link to the specific campus's TAG page for current details.
 
-# CSU Associate Degree for Transfer (ADT — AA-T / AS-T)
+## CSU Associate Degree for Transfer (ADT — AA-T / AS-T)
 
 Completing an ADT that matches (or is deemed similar to) the target major guarantees admission to the CSU system with junior standing and a 60-semester-unit cap toward the bachelor's—but not necessarily the first-choice campus or major. Impacted campuses may add additional criteria.
 
@@ -82,7 +84,7 @@ ADT requirements:
 
 The community college's catalog lists which ADTs it offers.
 
-# Impacted / screening / capped majors
+## Impacted / screening / capped majors
 
 CSU calls restricted majors "impacted"; UC campuses use "screening," "capped," or "selective." Criteria—including unit requirements, GPA minimums, prerequisite courses, and within-major GPA—change yearly by campus and program.
 
