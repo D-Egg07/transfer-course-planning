@@ -5,7 +5,7 @@ description: Use when helping a California community college student decide whic
 
 # Transfer Course Planning
 
-This skill turns a community college student's goal — transfer to this university, this major — into a term-by-term course plan and a rendered one-page planner per target. Every articulation, GE-area, AP-credit, TAG, or ADT claim must trace to assist.org or a community college's own published chart. Never assert one from memory.
+This skill turns a student's transfer goal into a term-by-term course plan and a one-page planner per target. Every articulation, GE-area, AP-credit, TAG, or ADT claim must trace to assist.org or a community college's own published chart. Never assert one from memory.
 
 ## When to use
 
@@ -51,15 +51,15 @@ Mark current and completed courses against major prep and GE areas. Apply AP/IB 
 
 ## Step 4 — Admission scaffolding
 
-Per target: minimum transferable units and junior standing; UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); CSU American Institutions. Thresholds are in references/reconciliation.md.
+Per target: minimum transferable units and junior standing; UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); the CSU US History, Constitution & American Ideals requirement.
 
 ## Step 5 — Guaranteed backup
 
-UC → TAG (offered only by Davis, Irvine, Merced, Riverside, Santa Barbara, Santa Cruz — never Berkeley, UCLA, San Diego; filed September 1–30). CSU → an ADT matching the major. If the primary target offers no guarantee, recommend and fully map one that does. See references/reconciliation.md.
+UC → TAG (offered only by Davis, Irvine, Merced, Riverside, Santa Barbara, Santa Cruz — never Berkeley, UCLA, San Diego; filed September 1–30, separately from and before the regular UC application). CSU → an ADT matching the major. If the primary target offers no guarantee, recommend and fully map one that does.
 
 ## Step 6 — Cross / concurrent enrollment
 
-If the community college participates with the target (check its transfer center), use it for after-transfer-only courses: ~one lower-division course per term, up to two terms, nominal per-unit fee, letter grade required, ineligible once admitted to any four-year — so schedule these before spring admission decisions.
+If the community college participates with the target (check its transfer center), use it for after-transfer-only courses: ~one lower-division course per term, up to two terms, nominal per-unit fee, letter grade required. Ineligible once admitted to any four-year — schedule these before spring admission decisions.
 
 ## Step 7 — Build the term grid
 
@@ -76,12 +76,12 @@ Fill templates/planner.html — one artifact per primary target. Always include 
 - Forgetting the after-transfer courses exist
 - Missing that the target has no TAG
 - Putting a cross-enrollment course in the final spring term
-- Treating Cal-GETC as covering CSU American Institutions
+- Treating Cal-GETC as covering the CSU US History, Constitution & American Ideals requirement
 - Ignoring prerequisite chains when sequencing terms
 
 ## Which guarantee applies?
 
-```dot
+```graphviz
 digraph g {
   rankdir=TB; node [shape=box];
   q1 [label="UC or CSU target?"];
