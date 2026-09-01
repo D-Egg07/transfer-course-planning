@@ -1,0 +1,15 @@
+{
+  "name": "transfer-course-planning",
+  "owner": {
+    "name": "D-Egg07",
+    "url": "https://github.com/D-Egg07"
+  },
+  "plugins": [
+    {
+      "name": "transfer-course-planning",
+      "source": "./",
+      "description": "Plan California community college courses to transfer into a UC or CSU major: assist.org articulation, Cal-GETC, AP credit, and TAG/ADT guaranteed-admission tracks.",
+      "version": "0.1.0"
+    }
+  ]
+}
