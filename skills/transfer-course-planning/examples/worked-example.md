@@ -27,7 +27,7 @@ Lower-division preparation from that agreement:
 | Berkeley requirement | Las Positas equivalent |
 |---|---|
 | Calculus | MATH 1 |
-| Statistical Thinking | AP Statistics (score 3+) — no course needed |
+| Statistical Thinking | AP Statistics (score 3+) — no course needed — confirm with Berkeley; AP toward major prep varies by campus |
 | Computer Programming | ENGR 26 + CS 2 together, articulating to Berkeley ENGIN 7 (assist flags "this articulation will be revised") |
 | Neuroscience (PSYCH C61) | PSYC 4 |
 | Discrete Math (MATH 55) | CS 17 / MATH 10 |
@@ -46,7 +46,7 @@ Psychology and Human Geography are two different Area 4 disciplines, so both
 Area 4 course slots are satisfied by AP and no Area 4 course is needed.
 
 **Already done or in progress:** MATH 1 (Calculus) and PSYC 4 (Neuroscience)
-are in progress this term. AP Statistics clears Statistical Thinking outright.
+are in progress this term. AP Statistics clears Statistical Thinking outright — confirm with Berkeley; AP toward major prep varies by campus.
 AP covers Cal-GETC Area 2 and both Area 4 slots.
 
 **After-transfer list** (no articulation exists, so they cannot be completed
@@ -85,8 +85,8 @@ extra is needed for the backup.
 
 ## Step 6 — cross-enrollment
 
-Las Positas participates in **UC Berkeley cross-enrollment**: about $46 per
-unit, one lower-division course per term, up to two terms total, taken for a
+Las Positas participates in **UC Berkeley cross-enrollment**: about $46/unit — verify the
+current fee with the Transfer Center — one lower-division course per term, up to two terms total, taken for a
 letter grade. A student becomes ineligible once admitted anywhere.
 
 Use both allowed terms for the two no-articulation courses:

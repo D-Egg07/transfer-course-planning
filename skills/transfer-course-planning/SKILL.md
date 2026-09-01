@@ -52,7 +52,7 @@ Mark current and completed courses against major prep and GE areas. Apply AP/IB 
 
 ## Step 4 — Admission scaffolding
 
-Per target: minimum transferable units and junior standing (~70 lower-division units is the ceiling toward the degree — see references/reconciliation.md); UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); the CSU US History, Constitution & American Ideals requirement.
+Per target: minimum transferable units and junior standing (UC caps transferable credit earned at a community college at 70 semester units toward the degree — see references/reconciliation.md); UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); the CSU US History, Constitution & American Ideals requirement.
 
 ## Step 5 — Guaranteed backup
 

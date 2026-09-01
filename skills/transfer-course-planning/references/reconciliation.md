@@ -4,25 +4,25 @@
 
 Cal-GETC (California General Education Transfer Curriculum, effective Fall 2025) unifies lower-division general education for all new transfer students into UC and CSU. It requires 11 courses across six areas:
 
-| Area | Requirement |
-|------|-------------|
-| 1A | English Composition |
-| 1B | Critical Thinking & Composition |
-| 1C | Oral Communication |
-| 2 | Mathematical Concepts & Quantitative Reasoning |
-| 3A | Arts |
-| 3B | Humanities |
-| 4 | Social & Behavioral Sciences (two courses from two different disciplines) |
-| 5A | Physical Science |
-| 5B | Biological Science |
-| 5C | Laboratory (required only if neither 5A nor 5B includes a lab component) |
-| 6 | Ethnic Studies |
+| Area | Requirement | Courses |
+|------|-------------|---------|
+| 1A | English Composition | 1 |
+| 1B | Critical Thinking & Composition | 1 |
+| 1C | Oral Communication | 1 |
+| 2 | Mathematical Concepts & Quantitative Reasoning | 1 |
+| 3A | Arts | 1 |
+| 3B | Humanities | 1 |
+| 4 | Social & Behavioral Sciences (two courses from two different disciplines) | 2 |
+| 5A | Physical Science | 1 |
+| 5B | Biological Science | 1 |
+| 5C | Laboratory (required only if neither 5A nor 5B includes a lab component) | 0–1 |
+| 6 | Ethnic Studies | 1 |
 
 IGETC and CSU GE-Breadth are the pre-Fall-2025 patterns, relevant only for continuing students who began before Fall 2025.
 
 ## UC admission scaffolding
 
-UC transfer admission typically requires 60 UC-transferable semester units completed by the end of the spring term before transfer, plus junior standing (60+ units with satisfactory academic progress). Roughly 70 lower-division units maximum apply toward the UC degree.
+UC transfer admission typically requires 60 UC-transferable semester units completed by the end of the spring term before transfer, plus junior standing (60+ units with satisfactory academic progress). UC caps transferable credit earned at a community college at 70 semester units toward the degree.
 
 The **7-course pattern** is a common scaffolding for ensuring broad preparation:
 - Two English composition courses
@@ -38,7 +38,7 @@ CSU transfer requires 60 transferable semester units and completion of the **Gol
 - A3: Critical Thinking
 - B4: Quantitative Reasoning
 
-Minimum overall GPA is 2.0; however, 2.5+ is expected and higher GPA may be required for impacted campuses and majors. Always check the specific campus for current thresholds.
+Minimum overall GPA is 2.0 for California residents (nonresidents need 2.4); however, 2.5+ is expected and higher GPA may be required for impacted campuses and majors. Always check the specific campus for current thresholds.
 
 ## US History, Constitution & American Ideals (CSU only)
 
@@ -52,16 +52,16 @@ Common cases: AP Psychology and AP Human Geography each commonly map to Area 4, 
 
 AP/IB applied to major preparation requirements varies by campus and by exam. Apply AP/IB toward major credit only when the assist.org agreement or the campus explicitly states it—always flag "confirm with the campus."
 
-## Language other than English (UC graduation requirement, not admission)
+## Language other than English (campus/college graduation requirement, not admission)
 
-UC requires demonstration of proficiency in a language other than English, satisfied by any one of:
+This is a graduation requirement at some UC campuses/colleges (e.g. UC Berkeley L&S, the UCLA College) — it is not systemwide, does not exist at every UC or in every college, and is not an admission requirement. Where it applies it is commonly satisfied by any one of:
 
-- Two years of the same language in high school with C- or better in the final term
+- Three years of the same language in high school with C- or better in the final term (note: two years is the a–g admission threshold, not this requirement)
 - A qualifying AP or IB language exam score
 - One college course in the language
 - A proficiency demonstration
 
-Native speakers can often validate the requirement by exam or petition.
+Native speakers can often validate the requirement by exam or petition. Confirm on the target college's own graduation-requirement page.
 
 ## UC Transfer Admission Guarantee (TAG)
 
