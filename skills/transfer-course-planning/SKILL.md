@@ -28,6 +28,7 @@ Interactive: use the question tool for structured fields, free text for lists. N
 | Field | Notes |
 |---|---|
 | From — community college | exact name for assist.org |
+| First term enrolled / GE pattern in progress | tells Cal-GETC students from pre-Fall-2025 IGETC / CSU GE-Breadth students |
 | To — target universities | each primary target gets its own planner |
 | Major + degree flavor | exact assist.org string; B.A. vs B.S. if prep differs |
 | Current term + courses now | — |
@@ -43,19 +44,19 @@ Interactive: use the question tool for structured fields, free text for lists. N
 
 ## Step 2 — Pull the data
 
-Per target from → to → major: get the assist.org major agreement (see references/assist-navigation.md) and record the catalog year actually used. Get the college's Cal-GETC list — flag students on IGETC / CSU GE-Breadth (began before Fall 2025). Get the college's AP/IB chart. For CSU targets, check for a matching ADT and pull its Transfer Model Curriculum. If the university uses its own lower-division GE, pull that campus GE/Breadth agreement too.
+Per target from → to → major: get the assist.org major agreement (see references/assist-navigation.md) and record the catalog year actually used. Get the college's Cal-GETC list; but for a student who began before Fall 2025 and is already on IGETC or CSU GE-Breadth, pull that pattern's list instead and plan against it. Get the college's AP/IB chart. For CSU targets, check the college's catalog for a matching ADT (AA-T / AS-T) and pull its Transfer Model Curriculum. If the university uses its own lower-division GE, pull that campus GE/Breadth agreement too.
 
 ## Step 3 — Reconcile
 
-Mark current and completed courses against major prep and GE areas. Apply AP/IB to GE areas from the college's chart (never assumed), and to major prep only when the agreement or campus says so (flag "confirm"). Flag every "No Course Articulated" / "must be taken at the university" item as an after-transfer list. Compute remaining major prep and GE. See references/reconciliation.md.
+Mark current and completed courses against major prep and GE areas. Apply AP/IB to GE areas from the college's chart (never assumed), and to major prep only when the agreement or campus says so (flag "confirm"). Flag every "No Course Articulated" / "must be taken at the university" item as an after-transfer list. A requirement with no completed course and no qualifying AP/IB score is remaining prep — schedule it (do not carry the worked example's AP assumptions to a student who lacks those scores). Compute remaining major prep and GE. See references/reconciliation.md.
 
 ## Step 4 — Admission scaffolding
 
-Per target: minimum transferable units and junior standing; UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); the CSU US History, Constitution & American Ideals requirement.
+Per target: minimum transferable units and junior standing (~70 lower-division units is the ceiling toward the degree — see references/reconciliation.md); UC 7-course pattern or CSU Golden Four and deadline terms; minimum vs competitive GPA and any screening-course GPA; the UC language requirement; impacted / screening / capped status (link the campus's own page); the CSU US History, Constitution & American Ideals requirement.
 
 ## Step 5 — Guaranteed backup
 
-UC → TAG (offered only by Davis, Irvine, Merced, Riverside, Santa Barbara, Santa Cruz — never Berkeley, UCLA, San Diego; filed September 1–30, separately from and before the regular UC application). CSU → an ADT matching the major. If the primary target offers no guarantee, recommend and fully map one that does.
+UC → TAG (offered only by Davis, Irvine, Merced, Riverside, Santa Barbara, Santa Cruz — never Berkeley, UCLA, San Diego; filed September 1–30, separately from and before the regular UC application). CSU → an ADT matching the major — this guarantees admission to the CSU system with junior standing, not a specific campus or major, and does not bypass a campus's impaction criteria. If the primary target offers no guarantee, recommend and fully map one that does.
 
 ## Step 6 — Cross / concurrent enrollment
 
