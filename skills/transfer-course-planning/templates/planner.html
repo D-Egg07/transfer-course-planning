@@ -170,7 +170,9 @@
 
   @media (max-width: 560px) { td, th { padding: 10px 14px; } .term-head { padding: 14px; } }
   @media print {
-    :root {
+    :root,
+    :root:not([data-theme="light"]),
+    :root[data-theme="dark"] {
       --ground: #f7f4ec;
       --surface: #fffefb;
       --surface-2: #f1ece0;
